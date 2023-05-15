@@ -189,6 +189,7 @@ impl GraphNodeType {
             }
             cuda::CUgraphNodeType::CU_GRAPH_NODE_TYPE_MEM_ALLOC => GraphNodeType::MemoryAllocation,
             cuda::CUgraphNodeType::CU_GRAPH_NODE_TYPE_MEM_FREE => GraphNodeType::MemoryFree,
+            _ => todo!(),
         }
     }
 

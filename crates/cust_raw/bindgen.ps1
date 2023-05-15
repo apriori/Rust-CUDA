@@ -1,0 +1,17 @@
+bindgen.exe `
+  --allowlist-type="^CU.*" `
+  --allowlist-type="^cuuint(32|64)_t" `
+  --allowlist-type="^cudaError_enum" `
+  --allowlist-type="^cu.*Complex$" `
+  --allowlist-type="^cuda.*" `
+  --allowlist-type="^libraryPropertyType.*" `
+  --allowlist-var="^CU.*" `
+  --allowlist-function="^cu.*" `
+  --default-enum-style=rust `
+  --no-doc-comments `
+  --with-derive-default `
+  --with-derive-eq `
+  --with-derive-hash `
+  --with-derive-ord `
+  --use-core `
+  wrapper.h -o src/cuda.rs -- -I'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include'
